@@ -1,0 +1,51 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+//Variables and Breakpoints for responsive style
+@import "./Variable.scss";
+@import "./Breakpoint.scss";
+
+
+
+// root styles
+
+*,
+*::after,
+*::before,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include media("<=tablet") {
+        font-size: 90%;
+    }
+
+    @include media("<=phone") {
+        font-size: 70%;
+    }
+}
+
+.row{
+  display: flex;
+  .v-center{
+    align-items: center;
+
+  }
+  .s-btw{
+    justify-content: space-between;
+  
+  }
+
+}
+
+.page{
+  width: 100vw;
+  height: 100vh;
+}
